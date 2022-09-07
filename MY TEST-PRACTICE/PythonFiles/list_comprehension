@@ -1,0 +1,53 @@
+l = [5, 10, 15, 20, 25, 30]
+print(l)
+
+#METHOD 1
+l1= [value*value for value in l]
+print(l1, 'Method I')
+
+#METHOD 2
+l2 = []
+for value in l:
+    l2.append(value*value)
+print(l2, 'Method II')
+
+
+## TO CHECK IF VALUES IN L1 ARE DIVISIBLE BY 3
+l3 = [value for value in l if value%2 == 0 ]
+print(l3, 'are divisible by 3')
+print()
+
+
+
+## TO MERGE INTO A SINGLE LIST
+l4 = [(value1, value2) for value1 in range(1,4) for value2 in range(11,13)]
+print('L4, a list of lists:', l4)
+
+
+### TO MERGE l4 into a single list
+# l5 = []
+# for value in l4:
+#     for val in value:
+#         l5.append(val)
+# print(l5)
+l5 = [val for value in l4 for val in value]
+print(l5)
+print()
+
+## Print 'Even' in place of even numbers and odd in place of odd numbers
+l6 = ['Even' if value %2 ==0 else 'Odd' for value in l3]
+print(l6)
+print()
+
+##
+d = {value:value**2 for value in range(1,9)}
+d1 = {chr(value):value for value in range(97,123)}
+d2 = {key:value for key,value in d1.items()}
+print(d)
+print()
+print(d1)
+print()
+print(d2)
+
+
+
